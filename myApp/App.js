@@ -17,7 +17,7 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const POKEMON_API = 'https://pokeapi.co/api/v2/pokemon?limit=50';
+// const POKEMON_API = 'https://pokeapi.co/api/v2/pokemon?limit=50';
 
 function PokemonScreen() {
   const [url, setUrl] = useState(POKEMON_API);
@@ -339,8 +339,6 @@ function QRScreen() {
 
       <View style={styles.qrBox}>
         {QRCodeComp ? (
-          // render QR
-          // QRCodeComp expects a value prop
           React.createElement(QRCodeComp, { value: text || ' ' })
         ) : (
           <View style={styles.centered}>
